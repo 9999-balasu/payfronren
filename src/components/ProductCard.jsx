@@ -12,10 +12,10 @@ import toast, {Toaster} from "react-hot-toast"
 export default function ProductCard() {
     const [amount, setamount ] = useState(350);
 
-    const handlePayment = async () => {
+    const handlePayment = async () => {     
         try {
 
-            const res = await fetch("https://payback-2.onrender.com/api/payment/order", {
+            const res = await fetch("https://payback-3.onrender.com/api/payment/order", {
            // const res = await fetch(`${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/order`, {
                 method: "POST",
                 headers: {
@@ -47,7 +47,7 @@ export default function ProductCard() {
             handler: async (response) => {
                 console.log("response", response)
                 try {
-                    const res = await fetch("https://payback-2.onrender.com/api/payment/verify", {
+                    const res = await fetch("https://payback-3.onrender.com/api/payment/verify", {
                    // const res = await fetch(`${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/verify`, {
                         method: 'POST',
                         headers: {
